@@ -1,43 +1,18 @@
-import { useState } from 'react'
-// import './App.css'
+import Header from "./components/header.jsx"
+import Footer from "./components/footer.jsx"
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div id="page">
-		<div id="header">
-			<div>
-				<a href="#" class="logo"><img src="images/logo.png" alt=""></img></a>
-				<ul id="navigation">
-					<li class="selected">
-						<a href="#">Home</a>
-					</li>
-					<li>
-						<a href="about.html">About</a>
-					</li>
-					<li class="menu">
-						<a href="projects.html">Projects</a>
-						<ul class="primary">
-							<li>
-								<a href="proj1.html">proj 1</a>
-							</li>
-						</ul>
-					</li>
-				
-					<li>
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<Header />
 		<div id="body" class="home">
 			<div class="header">
 				<div>
 					<img src="images/satellite.png" alt="" class="satellite"></img>
 					<h1>SOYUZ TMA-M</h1>
 					<h2>SPACECRAFT</h2>
-					<a href="blog.html" class="more">Read More</a>
 					<h3>FEATURED PROJECTS</h3>
 					<ul>
 						<li>
@@ -89,24 +64,7 @@ function App() {
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<div class="connect">
-				<div>
-					<h1>FOLLOW OUR  MISSIONS ON</h1>
-					<div>
-						<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
-						<a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
-						<a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
-						<a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
-					</div>
-				</div>
-			</div>
-			<div class="footnote">
-				<div>
-					<p>&copy; 2023 BY SPACE PROSPECTION | ALL RIGHTS RESERVED</p>
-				</div>
-			</div>
-		</div>
+		<Footer />
 	</div>
   )
 }
