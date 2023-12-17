@@ -1,30 +1,34 @@
-function Header(){
-    return(
-        <div id="header">
+import { Link } from "react-router-dom"
+
+
+function Header() {
+	return (
+		<div id="header">
 			<div>
-				<a href="/" class="logo"><img src="images/logo.png" alt=""></img></a>
+				<Link to="/" class="logo"><img src="images/logo.png" alt=""></img></Link>
 				<ul id="navigation">
 					<li class="selected">
-						<a href="/">Home</a>
+						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<a href="/about">About</a>
+						<Link to="/about">About</Link>
 					</li>
 					<li class="menu">
-						<a href="/projects">Projects</a>
+						<Link to="/projects">Projects</Link>
 						<ul class="primary">
 							<li>
-								<a href="/proj1">proj 1</a>
+								<Link to="/proj1">Proj1</Link>
 							</li>
 						</ul>
 					</li>
-				
+
 					<li>
-						<a href="/contact">Contact</a>
+						<Link to="/contact">Contact</Link>
+
 					</li>
 				</ul>
 			</div>
 		</div>
-    )
+	)
 }
 export default Header
