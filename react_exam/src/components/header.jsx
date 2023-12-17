@@ -5,9 +5,9 @@ function Header() {
 	return (
 		<div id="header">
 			<div>
-				<Link to="/" class="logo"><img src="images/logo.png" alt=""></img></Link>
+				<Link to="/" className="logo"><img src="images/logo.png" alt=""></img></Link>
 				<ul id="navigation">
-					<li class="selected">
+					<li className="selected">
 						<Link to="/">Home</Link>
 					</li>
 					<li>
@@ -16,18 +16,24 @@ function Header() {
 					<li>
 						<Link to="/create">Create project</Link>
 					</li>
-					<li class="menu">
+					<li className="menu">
 						<Link to="/projects">Projects</Link>
-						<ul class="primary">
+						<ul className="primary">
 							<li>
 								<Link to="/proj1">Proj1</Link>
 							</li>
 						</ul>
 					</li>
 
+					
 					<li>
-						<Link to="/contact">Contact</Link>
-
+						<Link to="/login">Login</Link>
+					</li>
+					<li>
+						<Link to="/register">Register</Link>
+					</li>
+					<li>
+						<Link to="/logout">Logout</Link>
 					</li>
 				</ul>
 			</div>
