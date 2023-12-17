@@ -6,6 +6,7 @@ import About from "./components/About.jsx"
 import Projects from "./components/Projects.jsx"
 import Contact from "./components/Contact.jsx"
 import Proj1 from "./components/Proj1.jsx"
+import Create from "./components/Create.jsx"
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/projects" element={<Projects />}></Route>
 				<Route path="/contact" element={<Contact />}></Route>
 				<Route path="/proj1" element={<Proj1 />}></Route>
+				<Route path="/create" element={<Create />}></Route>
 			</Routes>
 			<Footer />
 		</div>

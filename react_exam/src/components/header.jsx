@@ -13,6 +13,9 @@ function Header() {
 					<li>
 						<Link to="/about">About</Link>
 					</li>
+					<li>
+						<Link to="/create">Create project</Link>
+					</li>
 					<li class="menu">
 						<Link to="/projects">Projects</Link>
 						<ul class="primary">
