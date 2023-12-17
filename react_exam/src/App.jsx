@@ -1,72 +1,26 @@
 import Header from "./components/header.jsx"
 import Footer from "./components/footer.jsx"
-
-
+import { Routes, Route } from "react-router-dom"
+import Home from "./components/Home.jsx"
+import About from "./components/About.jsx"
+import Projects from "./components/Projects.jsx"
+import Contact from "./components/Contact.jsx"
+import Proj1 from "./components/Proj1.jsx"
 
 function App() {
-  return (
-    <div id="page">
-		<Header />
-		<div id="body" class="home">
-			<div class="header">
-				<div>
-					<img src="images/satellite.png" alt="" class="satellite"></img>
-					<h1>SOYUZ TMA-M</h1>
-					<h2>SPACECRAFT</h2>
-					<h3>FEATURED PROJECTS</h3>
-					<ul>
-						<li>
-							<a href="projects.html"><img src="images/project-image1.jpg" alt=""></img></a>
-						</li>
-						<li>
-							<a href="projects.html"><img src="images/project-image2.jpg" alt=""></img></a>
-						</li>
-						<li>
-							<a href="projects.html"><img src="images/project-image3.jpg" alt=""></img></a>
-						</li>
-						<li>
-							<a href="projects.html"><img src="images/project-image4.jpg" alt=""></img></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="body">
-				<div>
-					<h1>OUR MISSION</h1>
-					<p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.</p>
-				</div>
-			</div>
-			<div class="footer">
-				<div>
-					<ul>
-						<li>
-							<h1>FEATURED VIDEO</h1>
-							<a href="blog.html"><img src="images/mars-rover.jpg" alt=""></img><span></span></a>
-						</li>
-						<li>
-							<h1>LATEST BLOG</h1>
-							<ul>
-								<li>
-									<a href="blog.html"><img src="images/finding-planet.jpg" alt=""></img></a>
-									<h1>FINDING PLANET X-123</h1>
-									<span>FEBRUARY 6, 2023</span>
-									<a href="blog.html" class="more">Read More</a>
-								</li>
-								<li>
-									<a href="blog.html"><img src="images/new-satellitedish.jpg" alt=""></img></a>
-									<h1>NEW SATELLITE DISH</h1>
-									<span>FEBRUARY 3, 2023</span>
-									<a href="blog.html" class="more">Read More</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
+	return (
+		<div id="page">
+			<Header />
+			<Routes>
+				<Route path="/" element={<Home />}></Route>
+				<Route path="/about" element={<About />}></Route>
+				<Route path="/projects" element={<Projects />}></Route>
+				<Route path="/contact" element={<Contact />}></Route>
+				<Route path="/proj1" element={<Proj1 />}></Route>
+			</Routes>
+			<Footer />
 		</div>
-		<Footer />
-	</div>
-  )
+	)
 }
 
 export default App
