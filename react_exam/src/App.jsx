@@ -10,6 +10,7 @@ import Proj1 from "./components/Proj1.jsx"
 import Create from "./components/Create.jsx"
 import Register from "./components/Register.jsx"
 import Login from "./components/Loginn.jsx"
+import Profile from "./components/Profile.jsx"
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 				<Route path="/proj1" element={<Proj1 />}></Route>
 				<Route path="/create" element={<RequireAuth><Create /></RequireAuth>}></Route>
 				<Route path="/register" element={<IsAuth><Register /></IsAuth>}></Route>
+				<Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>}></Route>
 			</Routes>
 			<Footer />
 		</div>
