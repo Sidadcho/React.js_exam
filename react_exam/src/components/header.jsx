@@ -1,7 +1,21 @@
 import { Link } from "react-router-dom"
+import { getAuth, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 
 function Header() {
+	function Logout() {
+		const auth = getAuth();
+		signOut(auth).then(() => {
+			localStorage.clear()
+		}).catch((error) => {
+			console.log(error);
+		});
+	
+	}
 	return (
 		<div id="header">
 			<div>
@@ -33,7 +47,7 @@ function Header() {
 						<Link to="/register">Register</Link>
 					</li>
 					<li>
-						<Link to="/logout">Logout</Link>
+						<a href="/" onClick={Logout}>Logout</a >
 					</li>
 				</ul>
 			</div>
