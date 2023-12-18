@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { getAuth, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/authContext";
 
 
 
@@ -14,22 +14,25 @@ function Header() {
 		}).catch((error) => {
 			console.log(error);
 		});
-	
 	}
+
+	const {currentUser} = useAuth();
+
 	return (
 		<div id="header">
 			<div>
 				<Link to="/" className="logo"><img src="images/logo.png" alt=""></img></Link>
 				<ul id="navigation">
-					<li className="selected">
+					<li>
 						<Link to="/">Home</Link>
 					</li>
 					<li>
 						<Link to="/about">About</Link>
 					</li>
-					<li>
-						<Link to="/create">Create project</Link>
-					</li>
+					{currentUser && (<li>
+						<Link to="/create" >Create project</Link>
+					</li>)}
+					
 					<li className="menu">
 						<Link to="/projects">Projects</Link>
 						<ul className="primary">
@@ -38,17 +41,17 @@ function Header() {
 							</li>
 						</ul>
 					</li>
-
-					
-					<li>
+					{!currentUser && (<li>
 						<Link to="/login">Login</Link>
-					</li>
-					<li>
+					</li>)}
+					{!currentUser && (<li>
 						<Link to="/register">Register</Link>
-					</li>
-					<li>
+					</li>)}
+				
+					{currentUser && (<li>
 						<a href="/" onClick={Logout}>Logout</a >
-					</li>
+					</li>)}
+					
 				</ul>
 			</div>
 		</div>

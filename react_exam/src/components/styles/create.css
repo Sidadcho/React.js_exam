@@ -1,18 +1,20 @@
-#body .header .register span{
+#body .header .create span{
     color: red;
     font-size: 20px;
 }
 
-#body .header .register input{
+#body .header .create input{
+    text-transform: none;
+
+}
+#body .header .create textarea{
     text-transform: none;
 
 }
 
-#body .header .register{
+#body .header .create{
     border: 2px solid white;
-    margin-top: 5em;
+    margin-top: 2em;
     border-radius: 50px;
     box-shadow: 20px 20px 10px 5px rgb(104, 104, 104);
 }
-
-

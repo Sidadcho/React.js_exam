@@ -11,7 +11,7 @@ function Login() {
 	const [password, setPassword] = useState("")
 	const navigate = useNavigate()
 
-	const {dispatch}= useContext(AuthContext)
+	const { dispatch } = useContext(AuthContext)
 
 	const handleLogin = (e) => {
 		e.preventDefault()
@@ -19,7 +19,7 @@ function Login() {
 		signInWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
 				const user = userCredential.user;
-				dispatch({type:'LOGIN', payload:user})
+				dispatch({ type: 'LOGIN', payload: user })
 				navigate('/')
 			})
 			.catch((error) => {
