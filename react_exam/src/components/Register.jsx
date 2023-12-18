@@ -1,17 +1,47 @@
+import { useState } from "react"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+
+
+
+
 function Register(){
+	const [error, setError] = useState(false)
+	const [passErr, setPassErr] = useState(false)
+	const [email, setEmail] = useState("")
+	const [password, setPassword] = useState("")
+	const [rePass, setRePass] = useState("")
+
+
+	const  handleRegister =(e) => {
+		e.preventDefault()
+
+		if(password != rePass){
+			return setPassErr(true);
+		}
+		createUserWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+				const user = userCredential.user;
+			})
+			.catch((error) => {
+				setError(true)
+			});
+	}
+
     return(
         <div id="body">
 			<div className="header">
 				<div className="register">
 					<h1>Register</h1>
 					<h2>Please register</h2>
-					<form action="index.html">
-						<input type="name" name="name" placeholder="name" ></input>
-						<input type="email" name="email" placeholder="email" ></input>
-						<input type="password" name="password" placeholder="password" ></input>
-						<input type="repass" name="repass" placeholder="repeat-password" ></input>
-
+					<form onSubmit={handleRegister}>
+						<input type="email" name="email" placeholder="email" onChange={e => setEmail(e.target.value)} ></input>
+						<input type="password" name="password" placeholder="password" onChange={e => setPassword(e.target.value)} ></input>
+						<input type="repass" name="repass" placeholder="repeat-password" onChange={e => setRePass(e.target.value)} ></input>
 						<input type="submit" value="Register" id="submit"/>
+						{error && <span>All fields are required</span>}
+						{passErr && <span>Passwords dont match</span>}
+
 					</form>
 				</div>
 			</div>
