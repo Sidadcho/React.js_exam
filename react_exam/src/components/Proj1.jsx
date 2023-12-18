@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from 'react';
 import { db } from "../firebase";
-import { doc, getDoc } from "firebase/firestore";
-import { useParams } from 'react-router-dom';
+import { deleteDoc, doc, getDoc } from "firebase/firestore";
+import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
 
 function Proj1() {
 	const [data, setData] = useState([]);
+	const navigate = useNavigate()
 
 	const params = useParams();
 	useEffect(() => {
@@ -16,6 +17,12 @@ function Proj1() {
 			}
 			getDatas()
 	}, [])
+
+	async function deleteData(e){
+		e.preventDefault();
+		await deleteDoc(doc(db, "projects", params.id));
+		navigate('/projects')
+	}
 
 	const { currentUser } = useContext(AuthContext)
 	
@@ -29,7 +36,7 @@ function Proj1() {
 					<p className='descriptionPage'>{data.description}</p>
 					{currentUser.uid == data.userId && (<div className="btns">
 						<button className="update-btn">UPDATE</button>
-						<button className="delete-btn">DELETE</button>
+						<button onClick={deleteData} className="delete-btn">DELETE</button>
 					</div>)}
 					
 				</div>
