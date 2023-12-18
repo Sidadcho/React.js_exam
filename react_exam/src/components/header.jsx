@@ -21,14 +21,14 @@ function Header() {
 			<div>
 				<Link to="/" className="logo"><img src="images/logo.png" alt=""></img></Link>
 				<ul id="navigation">
-					<li className="selected">
+					<li>
 						<Link to="/">Home</Link>
 					</li>
 					<li>
 						<Link to="/about">About</Link>
 					</li>
 					<li>
-						<Link to="/create">Create project</Link>
+						<Link to="/create" className="hidden">Create project</Link>
 					</li>
 					<li className="menu">
 						<Link to="/projects">Projects</Link>
