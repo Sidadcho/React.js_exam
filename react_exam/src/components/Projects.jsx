@@ -15,9 +15,9 @@ function Projects() {
 				const querySnapshot = await getDocs(collection(db, "projects"));
 				querySnapshot.forEach((doc) => {
 					list.push({ id: doc.id, ...doc.data() });
+					
 				});
 				setData(list)
-				console.log(list);
 			} catch (err) {
 				console.log(err);
 			}

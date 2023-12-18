@@ -1,0 +1,17 @@
+.profile{
+    background-color: red;
+    display: flex;
+    height: 100px;
+}
+
+.profile iframe{
+    width: 950px;
+    height: 500px;
+    margin-top: 10em;
+    z-index: 100;
+}
+
+.profilePage{
+   height: 100%;
+   width: 100%;
+}

@@ -36,6 +36,8 @@ function App() {
 				<Route path="/create" element={<RequireAuth><Create /></RequireAuth>}></Route>
 				<Route path="/register" element={<IsAuth><Register /></IsAuth>}></Route>
 				<Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>}></Route>
+				<Route path="/projects/:id" element={<Proj1 />}></Route>
+
 			</Routes>
 			<Footer />
 		</div>
