@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { useParams } from 'react-router-dom';
+import { AuthContext } from '../context/authContext';
 
 function Proj1() {
 	const [data, setData] = useState([]);
@@ -15,6 +16,9 @@ function Proj1() {
 			}
 			getDatas()
 	}, [])
+
+	const { currentUser } = useContext(AuthContext)
+	
 	return (
 		<div id="body">
 			<div className="header">
@@ -22,11 +26,12 @@ function Proj1() {
 					<h1 >{data.title}</h1>
 					<img src={data.imageUrl} alt=""></img>
 					<h2>{data.subtitle}</h2>
-					<p>{data.description}</p>
-					<div className="btns">
-						<button className="update-btn">Update</button>
-						<button className="delete-btn">Delete</button>
-					</div>
+					<p className='descriptionPage'>{data.description}</p>
+					{currentUser.uid == data.userId && (<div className="btns">
+						<button className="update-btn">UPDATE</button>
+						<button className="delete-btn">DELETE</button>
+					</div>)}
+					
 				</div>
 			</div>
 		</div>

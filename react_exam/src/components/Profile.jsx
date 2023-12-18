@@ -42,8 +42,8 @@ function Profile() {
             <div className="profilePage body">
                 <div>
                     <h1>Welcome, <br />{currentUser ? currentUser.email : "Guest"}!</h1>
-                    <p>You have a total of {count} posts!</p>
-                    {/* <iframe  src="https://www.youtube.com/embed/ztVV54sPOns&t=2s" frameborder="0"></iframe> */}
+                    <p className="profileP">You have a total of {count} posts!</p>
+                    <img src="https://www.pngall.com/wp-content/uploads/2/Rocket-Transparent.png"></img>
                 </div>
             </div>
         </div>
