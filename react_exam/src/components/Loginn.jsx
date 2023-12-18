@@ -1,20 +1,44 @@
-function Login(){
-    return(
-        <div id="body">
+import { useState } from "react"
+import { signInWithEmailAndPassword  } from "firebase/auth";
+import { auth } from "../firebase";
+
+function Login() {
+	const [error, setError] = useState(false)
+	const [email, setEmail] = useState("")
+	const [password, setPassword] = useState("")
+
+
+
+	const  handleLogin =(e) => {
+		e.preventDefault()
+
+		signInWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+				const user = userCredential.user;
+				console.log(user);
+			})
+			.catch((error) => {
+				setError(true)
+			});
+	}
+
+
+	return (
+		<div id="body">
 			<div className="header">
 				<div className="login">
 					<h1>Login</h1>
 					<h2>Please log in</h2>
-					<form action="index.html">
-						<input type="email" name="email" placeholder="email"></input>
-						<input type="password" name="password" placeholder="password"></input>
-
-						<input type="submit" value="login" id="submit"/>
+					<form onSubmit={handleLogin}>
+						<input type="email" name="email" placeholder="email" onChange={e => setEmail(e.target.value)}></input>
+						<input type="password" name="password" placeholder="password" onChange={e => setPassword(e.target.value)}></input>
+						<input type="submit" value="login" id="submit" />
+						{error && <span>Wrong email or password!</span>}
 					</form>
 				</div>
 			</div>
 		</div>
-    )
+	)
 }
 
 export default Login
