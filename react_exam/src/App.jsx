@@ -2,7 +2,7 @@ import { AuthContext } from "./context/authContext.jsx"
 import { useContext } from "react"
 import { Routes, Route, Navigate } from "react-router-dom"
 import Header from "./components/header.jsx"
-import Footer from "./components/footer.jsx"
+import Footer from "./components/Footer.jsx"
 import Home from "./components/Home.jsx"
 import About from "./components/About.jsx"
 import Projects from "./components/Projects.jsx"
@@ -19,18 +19,21 @@ function App() {
 	const RequireAuth = ({ children }) => {
 		return currentUser ? (children) : <Navigate to="/login" />
 	}
+	const IsAuth = ({ children }) => {
+		return currentUser ?  <Navigate to="/" /> : (children)
+	}
 
 	return (
 		<div id="page">
 			<Header />
 			<Routes>
-				<Route path="/login" element={<Login />}></Route>
+				<Route path="/login" element={<IsAuth><Login /></IsAuth>}></Route>
 				<Route path="/" element={<Home />}></Route>
 				<Route path="/about" element={<About />}></Route>
 				<Route path="/projects" element={<Projects />}></Route>
 				<Route path="/proj1" element={<Proj1 />}></Route>
 				<Route path="/create" element={<RequireAuth><Create /></RequireAuth>}></Route>
-				<Route path="/register" element={<Register />}></Route>
+				<Route path="/register" element={<IsAuth><Register /></IsAuth>}></Route>
 			</Routes>
 			<Footer />
 		</div>
