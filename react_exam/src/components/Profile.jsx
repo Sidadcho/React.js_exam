@@ -26,8 +26,6 @@ function Profile(){
                     if(item.userId == currentUser.uid){
                         projectCount++
                         setCount(projectCount)
-                    }else{
-                        null
                     }
                 })
 			} catch (err) {

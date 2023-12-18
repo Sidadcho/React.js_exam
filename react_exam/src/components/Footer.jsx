@@ -3,7 +3,7 @@ function Footer(){
         <div id="footer">
 			<div className="connect">
 				<div>
-					<h1>FOLLOW OUR  MISSIONS ON</h1>
+					<h1>FOLLOW OUR  MISSIONS</h1>
 				</div>
 			</div>
 		</div>
