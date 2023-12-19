@@ -1,4 +1,29 @@
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+
+
+
+
 function Home(){
+	const [data, setData] = useState([]);
+
+	useEffect(() => {
+		async function fetchData() {
+			let list = [];
+			try {
+				const querySnapshot = await getDocs(collection(db, "projects"));
+				querySnapshot.forEach((doc) => {
+					list.push({ id: doc.id, ...doc.data() });
+				});
+				setData(list)
+			} catch (err) {
+				console.log(err);
+			}
+		}
+		fetchData()
+	}, [])
+	
     return(
         <div id="body" className="home">
 			<div className="header">
@@ -37,9 +62,17 @@ function Home(){
 							<a href="https://www.youtube.com/watch?v=qDhP6lUO_AY" alt=""></a>
 						</li>
 						<li>
-							<h1>LATEST BLOG</h1>
+							<h1>LATEST PROJECTS</h1>
 							<ul>
-								
+							{data.map((item) => (
+							<li key={item.id}>
+								<img className="homeImage" src={item.imageUrl} alt={item.title} />
+								<div className="homePageText">
+									<h1 >{item.title}</h1>
+									<p >{item.description}</p>
+								</div>
+							</li>
+						))}
 							</ul>
 						</li>
 					</ul>

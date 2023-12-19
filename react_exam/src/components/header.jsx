@@ -21,7 +21,7 @@ function Header() {
 	return (
 		<div id="header">
 			<div>
-				<Link to="/" className="logo"><img src="images/logo.png" alt=""></img></Link>
+				<Link to="/" className="logo"><img src="/images/logo.png" alt=""></img></Link>
 				<ul id="navigation">
 					<li>
 						<Link to="/">Home</Link>
@@ -35,17 +35,15 @@ function Header() {
 					
 					<li className="menu">
 						<Link to="/projects">Projects</Link>
-						<ul className="primary">
-							<li>
-								<Link to="/proj1">Proj1</Link>
-							</li>
-						</ul>
 					</li>
 					{!currentUser && (<li>
 						<Link to="/login">Login</Link>
 					</li>)}
 					{!currentUser && (<li>
 						<Link to="/register">Register</Link>
+					</li>)}
+					{currentUser && (<li>
+						<Link to="/profile" >Profile</Link>
 					</li>)}
 				
 					{currentUser && (<li>

@@ -4,28 +4,29 @@ function About(){
 			<div className="header">
 				<div>
 					<h1>About</h1>
-					<h2>We Have Free Templates for Everyone</h2>
-					<p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the <a href="https://freewebsitetemplates.com/about/terms/">Terms of Use</a>. You can even remove all our links if you want to.</p>
+					<h2>Space is vast, so get your mind ready</h2>
+					
 				</div>
 			</div>
 			<div className="body">
 				<div>
 					<img src="images/earth-satellite.jpg" alt=""></img>
-					<h2>We Have More Templates for You</h2>
-					<p>Looking for more templates? Just browse through all our <a href="https://freewebsitetemplates.com/">Free Website Templates</a> and find what you’re looking for. But if you don’t find any website template you can use, you can try our <a href="https://freewebsitetemplates.com/freewebdesign/">Free Web Design</a> service and tell us all about it. Maybe you’re looking for something different, something special. And we love the challenge of doing something different and something special.</p>
+					<h2>satelites orbiting our world</h2>
+					<p>Satellites orbiting Earth can vary in altitude, with low Earth orbit satellites typically located around 160 to 2,000 kilometers above the planet's surface. They serve diverse purposes, from communication and navigation to Earth observation, contributing to scientific research, telecommunications, and global connectivity.</p>
 				</div>
 			</div>
 			<div className="footer">
 				<div>
 					<img src="images/space-shuttle.png" alt=""></img>
-					<h2>Be Part of Our Community</h2>
-					<p>If you’re experiencing issues and concerns about this website template, join the discussion <a href="https://freewebsitetemplates.com/forums/">on our forum</a> and meet other people in the community who share the same interests with you.</p>
+					<h2>space shuttles</h2>
+					<p>
+Space shuttles, like the iconic Space Shuttle Atlantis, were equipped with reusable orbiter vehicles, allowing them to complete multiple missions. The shuttle program saw its first launch, the Space Shuttle Columbia, in 1981, and over its operational span, shuttles traveled a cumulative distance equivalent to a round trip to the Moon.</p>
 				</div>
 			</div>
 			<div className="section">
 				<div>
-					<h2>Template Details</h2>
-					<p>Design Version 1. Code version 3. Website Template details, discussion and updates for this <a href="https://freewebsitetemplates.com/discuss/spacescience/"> Space Science Website Template</a>. Website Template design by <a href="https://freewebsitetemplates.com/">Free Website Templates</a>. Please feel free to remove some or all the text and links of this page and replace it with your own About content.</p>
+					<h2>our vast space</h2>
+					<p>Space is not completely silent; it contains a faint hum known as "space roar," a background noise of unknown origin. Additionally, the footprints left by astronauts on the Moon will likely remain unchanged for centuries due to the absence of wind and water erosion.</p>
 				</div>
 			</div>
 		</div>

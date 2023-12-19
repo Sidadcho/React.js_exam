@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register(){
 	const [error, setError] = useState(false)
@@ -41,8 +41,8 @@ function Register(){
 						<input type="submit" value="Register" id="submit"/>
 						{error && <span>All fields are required</span>}
 						{passErr && <span>Passwords dont match</span>}
-
 					</form>
+					<p>Already have an account? <Link to="/login">Login</Link></p>
 				</div>
 			</div>
 		</div>

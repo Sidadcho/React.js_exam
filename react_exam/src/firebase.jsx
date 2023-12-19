@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyA5SSTpXF1QScV_MPIJZg9fKiqCQTVBdk8",
   authDomain: "react-exam-softuni.firebaseapp.com",
