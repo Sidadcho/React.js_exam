@@ -21,7 +21,7 @@ function Header() {
 	return (
 		<div id="header">
 			<div>
-				<Link to="/" className="logo"><img src="images/logo.png" alt=""></img></Link>
+				<Link to="/" className="logo"><img src="/images/logo.png" alt=""></img></Link>
 				<ul id="navigation">
 					<li>
 						<Link to="/">Home</Link>

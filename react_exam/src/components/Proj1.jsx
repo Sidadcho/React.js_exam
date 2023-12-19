@@ -24,7 +24,7 @@ function Proj1() {
 		navigate('/projects')
 	}
 
-	const { currentUser } = useContext(AuthContext)
+	const { currentUser } = useContext(AuthContext);
 
 	return (
 		<div id="body">
@@ -34,10 +34,11 @@ function Proj1() {
 					<img src={data.imageUrl} alt=""></img>
 					<h2>{data.subtitle}</h2>
 					<p className='descriptionPage'>{data.description}</p>
-					{currentUser.uid == data.userId && (<div className="btns">
+
+					{!currentUser ? (<p></p>) : currentUser.uid == data.userId ? (<div className="btns">
 						<Link to={`/update/${params.id}`} className='update-btn'>UPDATE</Link>
 						<button onClick={deleteData} className="delete-btn">DELETE</button>
-					</div>)}
+					</div>) : <p></p>}
 
 				</div>
 			</div>
