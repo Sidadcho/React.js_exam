@@ -6,7 +6,7 @@
     border-radius: 50px;
     padding: 15px;
 }
-.likeBtn{
+.active-like{
     margin-top: 15px;
     font-size: 20px;
     border-radius: 50px;
@@ -16,6 +16,11 @@
     transition: 300ms;
     cursor: pointer;
 }
-.likeBtn:hover{
+.active-like:hover{
     background-color: purple;
+}
+
+
+.diactive-btn{
+   display: none;
 }
