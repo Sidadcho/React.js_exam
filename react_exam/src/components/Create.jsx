@@ -10,6 +10,7 @@ function Create() {
     const [imageUrl, setImageUrl] = useState({});
     const [subtitle, setSubtitle] = useState({});
     const [description, setDescription] = useState({});
+    const [likes, setLikes] = useState(0);
     const [error, setError] = useState(false);
     const navigate = useNavigate();
 
@@ -27,6 +28,7 @@ function Create() {
                     imageUrl: imageUrl,
                     subtitle: subtitle,
                     description: description,
+                    likes: likes,
                     timeStamp: serverTimestamp()
                 });
                 navigate('/projects')

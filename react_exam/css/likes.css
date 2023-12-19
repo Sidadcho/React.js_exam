@@ -1,0 +1,26 @@
+.likeSpan{
+    color: white;
+    font-size: 25px;
+    background-color: purple;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 15px;
+}
+.active-like{
+    margin-top: 15px;
+    font-size: 20px;
+    border-radius: 50px;
+    width: 150px;
+    background-color: rgb(202, 0, 0);
+    color: white;
+    transition: 300ms;
+    cursor: pointer;
+}
+.active-like:hover{
+    background-color: purple;
+}
+
+
+.diactive-btn{
+   display: none;
+}
