@@ -14,7 +14,7 @@ function Create() {
     const navigate = useNavigate();
 
    
-    const handleAdd = async (e) => {
+    const handleUpdate = async (e) => {
         e.preventDefault();
         const auth = getAuth();
         onAuthStateChanged(auth, async (user) => {
@@ -44,7 +44,7 @@ function Create() {
                 <div className="create">
                     <h1>Create</h1>
                     <h2>What is your project?</h2>
-                    <form onSubmit={handleAdd} >
+                    <form onSubmit={handleUpdate} >
                         <input type="text" name="title" placeholder="TITLE" onChange={e => setTitle(e.target.value)}></input>
                         <input type="url" name="imageUrl" placeholder="IMAGE-URL" onChange={e => setImageUrl(e.target.value)}></input>
                         <input type="text" name="subtitle" placeholder="SUB-TITLE" onChange={e => setSubtitle(e.target.value)}></input>

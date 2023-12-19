@@ -1,4 +1,4 @@
-#body .header div .btns{
+#body .header div .btns {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-#body .header div .btns .update-btn{
+#body .header div .btns .update-btn {
     background-color: white;
     font-size: 18px;
     padding: 10px;
@@ -17,13 +17,25 @@
     cursor: pointer;
     transition: 300ms ease;
 }
-#body .header div .btns .update-btn:hover{
+
+#body .header div .btns .update-btn:hover {
     background-color: purple;
     color: white;
-    
 }
 
-#body .header div .btns .delete-btn{
+#body .header div .btns .update-btn{
+    text-decoration: none;
+    color: black;
+    transition: 300ms ease;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#body .header div .btns .update-btn a:hover {
+    color: white;
+}
+
+#body .header div .btns .delete-btn {
     background-color: white;
     font-size: 18px;
     padding: 10px;
@@ -34,18 +46,17 @@
     cursor: pointer;
     transition: 300ms ease;
 }
-#body .header div .btns .delete-btn:hover{
+
+#body .header div .btns .delete-btn:hover {
     background-color: rgb(136, 1, 1);
     color: white;
-    
+
 }
 
-#body .header div .descriptionPage{
+#body .header div .descriptionPage {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 50px;
     padding: 30px;
-   
+
 }
-
-

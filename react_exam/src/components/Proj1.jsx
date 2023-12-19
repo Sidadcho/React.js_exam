@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { db } from "../firebase";
 import { deleteDoc, doc, getDoc } from "firebase/firestore";
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
 
 function Proj1() {
@@ -10,22 +10,22 @@ function Proj1() {
 
 	const params = useParams();
 	useEffect(() => {
-			async function getDatas() {
-				const docRef = doc(db, "projects", params.id);
-				const docSnap = await getDoc(docRef);
-				setData(docSnap.data());
-			}
-			getDatas()
+		async function getDatas() {
+			const docRef = doc(db, "projects", params.id);
+			const docSnap = await getDoc(docRef);
+			setData(docSnap.data());
+		}
+		getDatas()
 	}, [])
 
-	async function deleteData(e){
+	async function deleteData(e) {
 		e.preventDefault();
 		await deleteDoc(doc(db, "projects", params.id));
 		navigate('/projects')
 	}
 
 	const { currentUser } = useContext(AuthContext)
-	
+
 	return (
 		<div id="body">
 			<div className="header">
@@ -35,10 +35,10 @@ function Proj1() {
 					<h2>{data.subtitle}</h2>
 					<p className='descriptionPage'>{data.description}</p>
 					{currentUser.uid == data.userId && (<div className="btns">
-						<button className="update-btn">UPDATE</button>
+						<Link to={`/update/${params.id}`} className='update-btn'>UPDATE</Link>
 						<button onClick={deleteData} className="delete-btn">DELETE</button>
 					</div>)}
-					
+
 				</div>
 			</div>
 		</div>
