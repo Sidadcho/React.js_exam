@@ -41,7 +41,7 @@ function Profile() {
         <div id="body" className="profile home">
             <div className="profilePage body">
                 <div>
-                    <h1>Welcome, <br />{currentUser ? currentUser.email : "Guest"}!</h1>
+                    <h1>Welcome, <br />{currentUser ? currentUser.email : "no user"}!</h1>
                     <p className="profileP">You have a total of {count} posts!</p>
                     <img src="https://www.pngall.com/wp-content/uploads/2/Rocket-Transparent.png"></img>
                 </div>

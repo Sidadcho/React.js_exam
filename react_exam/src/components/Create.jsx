@@ -13,7 +13,6 @@ function Create() {
     const [likes, setLikes] = useState(0);
     const [error, setError] = useState(false);
     const navigate = useNavigate();
-
    
     const handleUpdate = async (e) => {
         e.preventDefault();
@@ -33,7 +32,7 @@ function Create() {
                 });
                 navigate('/projects')
             } catch (err) {
-                console.log(err);
+                
             }
         });
 
@@ -47,10 +46,10 @@ function Create() {
                     <h1>Create</h1>
                     <h2>What is your project?</h2>
                     <form onSubmit={handleUpdate} >
-                        <input type="text" name="title" placeholder="TITLE" onChange={e => setTitle(e.target.value)}></input>
-                        <input type="url" name="imageUrl" placeholder="IMAGE-URL" onChange={e => setImageUrl(e.target.value)}></input>
-                        <input type="text" name="subtitle" placeholder="SUB-TITLE" onChange={e => setSubtitle(e.target.value)}></input>
-                        <textarea type="text" name="description" placeholder="DESCRIPTION" onChange={e => setDescription(e.target.value)}></textarea>
+                        <input required type="text" name="title" placeholder="TITLE" onChange={e => setTitle(e.target.value)}></input>
+                        <input required type="url" name="imageUrl" placeholder="IMAGE-URL" onChange={e => setImageUrl(e.target.value)}></input>
+                        <input required type="text" name="subtitle" placeholder="SUB-TITLE" onChange={e => setSubtitle(e.target.value)}></input>
+                        <textarea required type="text" name="description" placeholder="DESCRIPTION" onChange={e => setDescription(e.target.value)}></textarea>
                         <input type="submit" value="Create" id="submit"/>
                         {error && <span>All fields are required!</span>}
 
