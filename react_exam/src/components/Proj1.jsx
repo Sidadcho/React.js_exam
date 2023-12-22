@@ -3,7 +3,6 @@ import { db } from "../firebase";
 import { deleteDoc, doc, getDoc } from "firebase/firestore";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
-import Likes from './Likes';
 
 function Proj1() {
 	const [data, setData] = useState([]);
@@ -40,7 +39,6 @@ function Proj1() {
 						<button onClick={deleteData} className="delete-btn">DELETE</button>
 					</div>) : <p></p>}
 
-					<Likes />
 
 				</div>
 			</div>
