@@ -43,10 +43,10 @@ function Update() {
                     <h1>Update</h1>
                     <h2>Update your project details</h2>
                     <form onSubmit={handleUpdate} >
-                        <input type="text" name="title" placeholder={data.title} onChange={e => setTitle(e.target.value)} ></input>
-                        <input type="url" name="imageUrl" placeholder={data.imageUrl} onChange={e => setImageUrl(e.target.value)} ></input>
-                        <input type="text" name="subtitle" placeholder={data.subtitle} onChange={e => setSubtitle(e.target.value)} ></input>
-                        <textarea type="text" name="description" placeholder={data.description} onChange={e => setDescription(e.target.value)} ></textarea>
+                        <input required type="text" name="title" placeholder={data.title} onChange={e => setTitle(e.target.value)} ></input>
+                        <input required type="url" name="imageUrl" placeholder={data.imageUrl} onChange={e => setImageUrl(e.target.value)} ></input>
+                        <input required type="text" name="subtitle" placeholder={data.subtitle} onChange={e => setSubtitle(e.target.value)} ></input>
+                        <textarea required type="text" name="description" placeholder={data.description} onChange={e => setDescription(e.target.value)} ></textarea>
                         <input type="submit" value="Update" id="submit" />
                     </form>
                 </div>

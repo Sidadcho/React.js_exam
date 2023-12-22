@@ -3,7 +3,6 @@ import { db } from "../firebase";
 import { deleteDoc, doc, getDoc } from "firebase/firestore";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
-import Likes from './Likes';
 
 function Proj1() {
 	const [data, setData] = useState([]);
@@ -35,13 +34,11 @@ function Proj1() {
 					<img src={data.imageUrl} alt=""></img>
 					<h2>{data.subtitle}</h2>
 					<p className='descriptionPage'>{data.description}</p>
-
 					{!currentUser ? (<p></p>) : currentUser.uid == data.userId ? (<div className="btns">
 						<Link to={`/update/${params.id}`} className='update-btn'>UPDATE</Link>
 						<button onClick={deleteData} className="delete-btn">DELETE</button>
 					</div>) : <p></p>}
 
-					<Likes />
 
 				</div>
 			</div>
