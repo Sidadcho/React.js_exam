@@ -1,9 +1,8 @@
-#body .header div{
+#body .header .projects_div{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 #body .header .projectPage{
@@ -23,13 +22,15 @@
 #body .header .projectPage li:nth-child(1) img{
     margin-top: 2em;
 }
-#body .header .projectPage li div h1{
+#body .header .projectPage li .projects_div h1{
     display: flex;
     justify-content: center;
 }
 
-#body .header .projectPage li div p{
+#body .header .projectPage li .projects_div p{
     display: flex;
+    text-align: center;
+    align-items: center;
     justify-content: center;
 }
 

@@ -28,24 +28,16 @@ function Home(){
         <div id="body" className="home">
 			<div className="header">
 				<div>
-					<img src="images/satellite.png" alt="" className="satellite"></img>
+					<img src="https://www.pngall.com/wp-content/uploads/2017/01/Weather-Satellite-Free-Download-PNG.png" alt="" className="satellite"></img>
 					<h1>SOYUZ TMA-M</h1>
 					<h2>SPACECRAFT</h2>
 					<h3>DIVE IN OUR SPACE</h3>
-					<ul>
-						<li>
-							<img src="images/project-image1.jpg" alt=""></img>
-						</li>
-						<li>
-							<img src="images/project-image2.jpg" alt=""></img>
-						</li>
-						<li>
-							<img src="images/project-image3.jpg" alt=""></img>
-						</li>
-						<li>
-							<img src="images/project-image4.jpg" alt=""></img>
-						</li>
-					</ul>
+					<div className="home_pictures">
+							<img src="https://media.wired.co.uk/photos/606dba78c36e357873e6cfef/3:2/pass/dasdasd.png" alt=""></img>
+							<img src="https://res.cloudinary.com/momentum-media-group-pty-ltd/image/upload/v1686795211/Space%20Connect/space-exploration-sc_fm1ysf.jpg" alt=""></img>
+							<img src="https://www.livemint.com/lm-img/img/2023/05/24/600x338/AP04-24-2023-000002B-0_1684900987128_1684901268251.jpg" alt=""></img>
+							<img src="https://www.aerospacelab.be/wp-content/uploads/2022/12/PVCC-webstory-header.png" alt=""></img>
+					</div>
 				</div>
 			</div>
 			<div className="body">

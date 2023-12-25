@@ -6,7 +6,7 @@ body {
 	width: auto;
 }
 body #page {
-	background: url("../images/bg-home.jpg") no-repeat scroll center top #000000;
+	background: url("https://www.wallpapers13.com/wp-content/uploads/2015/12/Space_Red_space_03947.jpg") no-repeat scroll center top #000000;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
@@ -30,26 +30,36 @@ img {
 	src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
 }
 /*----------------------------------------header-styles---------------------------------------*/
-#header {
-	background: url(../images/bg-transparent1.png) repeat;
-	margin: 0;
-	min-height: 60px;
-	padding: 0;
-	width: auto;
-}
+
 #header div {
-	margin: 0 auto;
-	max-width: 940px;
+	margin: 50px auto;
+	max-width: 950px;
 	min-height: 60px;
 	padding: 0 10px;
+}
+.home .home_pictures {
+	display: flex;
+	flex-direction: row;
+	height: 150px;
+	width: 100%;
+}
+.home .home_pictures img{
+	height: 130px;
+	background-size: cover;
 }
 #header div a.logo {
 	display: block;
 	float: left;
-	height: 60px;
-	margin: 0 44px 0 0;
+	height: 100px;
+	margin: -25px 44px 0 0;
 	padding: 0;
-	width: 304px;
+	width: 120px;
+}
+#header div .logo img{
+	display: block;
+	float: left;
+	height: 120px;
+	width: 120px;
 }
 #header div a img {
 	display: block;
@@ -808,7 +818,7 @@ img {
 	line-height: 23px;
 	margin: 0 0 26px;
 	padding: 0;
-	text-align: left;
+	text-align: center;
 	text-transform: uppercase;
 	width: 520px;
 }
@@ -820,7 +830,7 @@ img {
 	line-height: 24px;
 	margin: 0 0 41px;
 	padding: 0;
-	text-align: left;
+	text-align: center;
 	width: 520px;
 }
 #body .header div ul li div p a {
@@ -843,18 +853,15 @@ img {
 #body .header div ul li div a.more {
 	background-color: #3c0f38;
 	color: #ffffff;
-	display: block;
-	float: right;
+	display: flex;
 	font-family: Arial;
 	font-size: 14px;
 	font-weight: normal;
 	height: 31px;
 	line-height: 31px;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+	justify-content: center;
 	text-transform: uppercase;
-	width: 120px;
+	width: 100%;
 }
 #body .header div ul li div a.more:hover {
 	background-color: #620031;
@@ -1407,4 +1414,16 @@ img {
 }
 #wix a img {
 	width: 100%;
+}
+
+#navigation{
+	background-color: rgba(0, 0, 0, 0.616);
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.about_pictures{
+	height: 300px;
+	border: 2px solid white;
+	border-radius: 50px;
 }

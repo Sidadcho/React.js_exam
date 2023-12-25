@@ -10,14 +10,14 @@ function About(){
 			</div>
 			<div className="body">
 				<div>
-					<img src="images/earth-satellite.jpg" alt=""></img>
+					<img className="about_pictures" src="https://wallpapers.com/images/hd/red-space-3840-x-2160-fs0zh84roplzndp9.jpg" alt=""></img>
 					<h2>satelites orbiting our world</h2>
 					<p>Satellites orbiting Earth can vary in altitude, with low Earth orbit satellites typically located around 160 to 2,000 kilometers above the planet's surface. They serve diverse purposes, from communication and navigation to Earth observation, contributing to scientific research, telecommunications, and global connectivity.</p>
 				</div>
 			</div>
 			<div className="footer">
 				<div>
-					<img src="images/space-shuttle.png" alt=""></img>
+					<img className="about_pictures" src="https://wallpaperaccess.com/full/384698.png" alt=""></img>
 					<h2>space shuttles</h2>
 					<p>
 Space shuttles, like the iconic Space Shuttle Atlantis, were equipped with reusable orbiter vehicles, allowing them to complete multiple missions. The shuttle program saw its first launch, the Space Shuttle Columbia, in 1981, and over its operational span, shuttles traveled a cumulative distance equivalent to a round trip to the Moon.</p>
