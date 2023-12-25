@@ -29,7 +29,7 @@ function Projects() {
 	return (
 		<div id="body">
 			<div className="header">
-				<div>
+				<div className="projects_div">
 					<h1>Projects</h1>
 					<ul className="projectPage">
 						{data.map((item) => (
